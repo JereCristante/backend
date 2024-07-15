@@ -1,4 +1,4 @@
-import Board from "../src/models/Board.model.js";
+import Board from "../models/Board.model.js";
 
 const create = async (req, res, next) => {
   try {

@@ -6,6 +6,7 @@ async function verifyHash(req, res, next) {
     const user = await User.findOne({ email: req.body.email });
     const db_pass = user.password;
     const form_pass = req.body.password;
+    console.log("email: " + req.body.email + " pass: " + req.body.password);
     if (compareSync(form_pass, db_pass)) {
       return next();
     }

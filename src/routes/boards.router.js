@@ -5,7 +5,7 @@ import {
   readOne,
   updateOne,
   destroyOne,
-} from "../../controllers/boardController.js";
+} from "../controllers/boardController.js";
 
 const router = Router();
 
