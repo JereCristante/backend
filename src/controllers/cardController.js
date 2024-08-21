@@ -23,7 +23,7 @@ const read = async (req, res, next) => {
       queries.list_id = req.query.list_id;
     }
     const all = await Card.find(queries)
-      .select("-createdAt -updatedAt -__v")
+      .select("-updatedAt -__v")
       .populate("user_id", "email")
       .populate("list_id", "name")
       .sort("title");
